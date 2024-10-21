@@ -15,14 +15,14 @@ u16 ULTRASONIC_u16GetDistance(void){
 	SET_BIT(TIFR_REG,ICR1L_REG);
 	
 	// Configure TRIG as output and ECHO as input
-	DIO_voidSetPinDir(US_PORT, TRIG, OUTPUT);
+	DIO_voidSetPinDir(DIO_PORTA, TRIG, OUTPUT);
 	DIO_voidSetPinDir(US_PORT, ECHO, INPUT);
 
 
 	// Send a 10us pulse to TRIG
-	DIO_voidSetPinVal(US_PORT, TRIG, HIGH);
+	DIO_voidSetPinVal(DIO_PORTA, TRIG, HIGH);
 	_delay_us(10);
-	DIO_voidSetPinVal(US_PORT, TRIG, LOW);
+	DIO_voidSetPinVal(DIO_PORTA, TRIG, LOW);
 
 
 	// Start measuring echo pulse duration

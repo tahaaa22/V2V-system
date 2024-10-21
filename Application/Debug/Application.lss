@@ -23,11 +23,11 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING
   9 .debug_frame  00000780  00000000  00000000  00004950  2**2
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_str    000009e4  00000000  00000000  000050d0  2**0
+ 10 .debug_str    000009d2  00000000  00000000  000050d0  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_loc    00001558  00000000  00000000  00005ab4  2**0
+ 11 .debug_loc    00001558  00000000  00000000  00005aa2  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_ranges 00000218  00000000  00000000  0000700c  2**0
+ 12 .debug_ranges 00000218  00000000  00000000  00006ffa  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -115,7 +115,7 @@ int main(void) {
 	
 	
 	while(1) {
-	
+		
 		u16 dist = ULTRASONIC_u16GetDistance();
   a6:	0e 94 a5 01 	call	0x34a	; 0x34a <ULTRASONIC_u16GetDistance>
   aa:	ec 01       	movw	r28, r24
@@ -132,15 +132,15 @@ int main(void) {
   ba:	2a 97       	sbiw	r28, 0x0a	; 10
   bc:	38 f4       	brcc	.+14     	; 0xcc <main+0x3a>
 		{
-		LCD_voidClearScreen();
+			LCD_voidClearScreen();
   be:	0e 94 83 01 	call	0x306	; 0x306 <LCD_voidClearScreen>
-		
+			
 			LED_voidOn(DIO_PORTC,DIO_PIN2);
   c2:	62 e0       	ldi	r22, 0x02	; 2
   c4:	82 e0       	ldi	r24, 0x02	; 2
   c6:	0e 94 87 01 	call	0x30e	; 0x30e <LED_voidOn>
   ca:	ed cf       	rjmp	.-38     	; 0xa6 <main+0x14>
-		}else{
+			}else{
 			LED_voidOff(DIO_PORTC,DIO_PIN2);
   cc:	62 e0       	ldi	r22, 0x02	; 2
   ce:	82 e0       	ldi	r24, 0x02	; 2
@@ -480,10 +480,10 @@ u16 ULTRASONIC_u16GetDistance(void){
  36c:	88 bf       	out	0x38, r24	; 56
 	
 	// Configure TRIG as output and ECHO as input
-	DIO_voidSetPinDir(US_PORT, TRIG, OUTPUT);
+	DIO_voidSetPinDir(DIO_PORTA, TRIG, OUTPUT);
  36e:	41 e0       	ldi	r20, 0x01	; 1
- 370:	67 e0       	ldi	r22, 0x07	; 7
- 372:	83 e0       	ldi	r24, 0x03	; 3
+ 370:	60 e0       	ldi	r22, 0x00	; 0
+ 372:	80 e0       	ldi	r24, 0x00	; 0
  374:	0e 94 2a 02 	call	0x454	; 0x454 <DIO_voidSetPinDir>
 	DIO_voidSetPinDir(US_PORT, ECHO, INPUT);
  378:	40 e0       	ldi	r20, 0x00	; 0
@@ -493,10 +493,10 @@ u16 ULTRASONIC_u16GetDistance(void){
 
 
 	// Send a 10us pulse to TRIG
-	DIO_voidSetPinVal(US_PORT, TRIG, HIGH);
+	DIO_voidSetPinVal(DIO_PORTA, TRIG, HIGH);
  382:	41 e0       	ldi	r20, 0x01	; 1
- 384:	67 e0       	ldi	r22, 0x07	; 7
- 386:	83 e0       	ldi	r24, 0x03	; 3
+ 384:	60 e0       	ldi	r22, 0x00	; 0
+ 386:	80 e0       	ldi	r24, 0x00	; 0
  388:	0e 94 9d 02 	call	0x53a	; 0x53a <DIO_voidSetPinVal>
 	#else
 		//round up by default
@@ -509,10 +509,10 @@ u16 ULTRASONIC_u16GetDistance(void){
  390:	f1 f7       	brne	.-4      	; 0x38e <ULTRASONIC_u16GetDistance+0x44>
  392:	00 00       	nop
 	_delay_us(10);
-	DIO_voidSetPinVal(US_PORT, TRIG, LOW);
+	DIO_voidSetPinVal(DIO_PORTA, TRIG, LOW);
  394:	40 e0       	ldi	r20, 0x00	; 0
- 396:	67 e0       	ldi	r22, 0x07	; 7
- 398:	83 e0       	ldi	r24, 0x03	; 3
+ 396:	60 e0       	ldi	r22, 0x00	; 0
+ 398:	80 e0       	ldi	r24, 0x00	; 0
  39a:	0e 94 9d 02 	call	0x53a	; 0x53a <DIO_voidSetPinVal>
 
 

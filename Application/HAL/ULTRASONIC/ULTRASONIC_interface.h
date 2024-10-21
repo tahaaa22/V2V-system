@@ -19,7 +19,7 @@
 
 // Define sensor pins
 #define US_PORT  DIO_PORTD
-#define TRIG	 DIO_PIN7
+#define TRIG	 DIO_PIN0
 #define ECHO     DIO_PIN6
 
 

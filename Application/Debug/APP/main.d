@@ -57,6 +57,8 @@ APP/main.d APP/main.o: ../APP/main.c ../APP/main.h \
  ../APP/../HAL/DC_MOTOR/DC_MOTOR_interface.h \
  ../APP/../HAL/DC_MOTOR/../../MCAL/DIO/DIO_interface.h \
  ../APP/../HAL/DC_MOTOR/../../MCAL/TIM1/TIM1_interface.h \
+ ../APP/../HAL/DC_MOTOR/../../MCAL/TIM0/TIM0_interface.h \
+ ../APP/../HAL/DC_MOTOR/../../MCAL/TIM2/TIM2_interface.h \
  ../APP/../HAL/DC_MOTOR/DC_MOTOR_config.h \
  ../APP/../HAL/SERVO_MOTOR/SERVO_MOTOR_interface.h \
  ../APP/../HAL/SERVO_MOTOR/../../MCAL/DIO/DIO_interface.h \
@@ -216,6 +218,10 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\
 ../APP/../HAL/DC_MOTOR/../../MCAL/DIO/DIO_interface.h:
 
 ../APP/../HAL/DC_MOTOR/../../MCAL/TIM1/TIM1_interface.h:
+
+../APP/../HAL/DC_MOTOR/../../MCAL/TIM0/TIM0_interface.h:
+
+../APP/../HAL/DC_MOTOR/../../MCAL/TIM2/TIM2_interface.h:
 
 ../APP/../HAL/DC_MOTOR/DC_MOTOR_config.h:
 

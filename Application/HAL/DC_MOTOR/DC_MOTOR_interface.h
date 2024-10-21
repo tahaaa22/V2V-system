@@ -13,6 +13,8 @@
 /* Section: Includes */
 #include "../../MCAL/DIO/DIO_interface.h"
 #include "../../MCAL/TIM1/TIM1_interface.h"
+#include "../../MCAL/TIM0/TIM0_interface.h"
+#include "../../MCAL/TIM2/TIM2_interface.h"
 #include "DC_MOTOR_config.h"
 
 /* Section: Macro Declaration */
@@ -51,9 +53,21 @@ void DC_MOTOR_voidACW(u8 copy_u8speed);
 /*****************************************************************************
 * Function Name: DC_MOTOR_voidStop
 * Purpose      : Stops DC Motor
-* Parameters   : u8 copy_u8speed
+* Parameters   : void
 * Return value : void
 *****************************************************************************/
-void DC_MOTOR_voidStop(u8 copy_u8speed);
+void DC_MOTOR_voidStop(void);
+
+void DC_MOTOR_voidMoveForward_1(u8 copy_u8speed);
+
+void DC_MOTOR_voidMoveBackward_1(u8 copy_u8speed);
+
+void DC_MOTOR_voidStop_1(void);
+
+void DC_MOTOR_voidMoveForward_2(u8 copy_u8speed);
+
+void DC_MOTOR_voidMoveBackward_2(u8 copy_u8speed);
+
+void DC_MOTOR_voidStop_2(void);
 
 #endif /* DC_MOTOR_INTERFACE_H_ */

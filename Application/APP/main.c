@@ -20,7 +20,7 @@ int main(void) {
 	
 	
 	while(1) {
-	
+		
 		u16 dist = ULTRASONIC_u16GetDistance();
 		
 		LCD_voidGoto(0,0);
@@ -28,10 +28,10 @@ int main(void) {
 		
 		if (dist < 10)
 		{
-		LCD_voidClearScreen();
-		
+			LCD_voidClearScreen();
+			
 			LED_voidOn(DIO_PORTC,DIO_PIN2);
-		}else{
+			}else{
 			LED_voidOff(DIO_PORTC,DIO_PIN2);
 			
 		}

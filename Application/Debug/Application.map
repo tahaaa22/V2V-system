@@ -73,17 +73,29 @@ Discarded input sections
  .text.DC_MOTOR_voidACW
                 0x00000000       0x42 HAL/DC_MOTOR/DC_MOTOR_prog.o
  .text.DC_MOTOR_voidStop
-                0x00000000       0x42 HAL/DC_MOTOR/DC_MOTOR_prog.o
- .debug_info    0x00000000      0x311 HAL/DC_MOTOR/DC_MOTOR_prog.o
- .debug_abbrev  0x00000000       0x98 HAL/DC_MOTOR/DC_MOTOR_prog.o
- .debug_loc     0x00000000       0xea HAL/DC_MOTOR/DC_MOTOR_prog.o
+                0x00000000       0x3c HAL/DC_MOTOR/DC_MOTOR_prog.o
+ .text.DC_MOTOR_voidMoveForward_1
+                0x00000000       0x40 HAL/DC_MOTOR/DC_MOTOR_prog.o
+ .text.DC_MOTOR_voidMoveBackward_1
+                0x00000000       0x40 HAL/DC_MOTOR/DC_MOTOR_prog.o
+ .text.DC_MOTOR_voidStop_1
+                0x00000000       0x3a HAL/DC_MOTOR/DC_MOTOR_prog.o
+ .text.DC_MOTOR_voidMoveForward_2
+                0x00000000       0x40 HAL/DC_MOTOR/DC_MOTOR_prog.o
+ .text.DC_MOTOR_voidMoveBackward_2
+                0x00000000       0x40 HAL/DC_MOTOR/DC_MOTOR_prog.o
+ .text.DC_MOTOR_voidStop_2
+                0x00000000       0x3a HAL/DC_MOTOR/DC_MOTOR_prog.o
+ .debug_info    0x00000000      0x7bd HAL/DC_MOTOR/DC_MOTOR_prog.o
+ .debug_abbrev  0x00000000       0xb2 HAL/DC_MOTOR/DC_MOTOR_prog.o
+ .debug_loc     0x00000000      0x1d4 HAL/DC_MOTOR/DC_MOTOR_prog.o
  .debug_aranges
-                0x00000000       0x30 HAL/DC_MOTOR/DC_MOTOR_prog.o
- .debug_ranges  0x00000000       0x20 HAL/DC_MOTOR/DC_MOTOR_prog.o
- .debug_line    0x00000000      0x189 HAL/DC_MOTOR/DC_MOTOR_prog.o
- .debug_str     0x00000000      0x1f7 HAL/DC_MOTOR/DC_MOTOR_prog.o
+                0x00000000       0x60 HAL/DC_MOTOR/DC_MOTOR_prog.o
+ .debug_ranges  0x00000000       0x50 HAL/DC_MOTOR/DC_MOTOR_prog.o
+ .debug_line    0x00000000      0x341 HAL/DC_MOTOR/DC_MOTOR_prog.o
+ .debug_str     0x00000000      0x29d HAL/DC_MOTOR/DC_MOTOR_prog.o
  .comment       0x00000000       0x31 HAL/DC_MOTOR/DC_MOTOR_prog.o
- .debug_frame   0x00000000       0x5c HAL/DC_MOTOR/DC_MOTOR_prog.o
+ .debug_frame   0x00000000       0xd4 HAL/DC_MOTOR/DC_MOTOR_prog.o
  .text          0x00000000        0x0 HAL/EEPROM/EEPROM_prog.o
  .data          0x00000000        0x0 HAL/EEPROM/EEPROM_prog.o
  .bss           0x00000000        0x0 HAL/EEPROM/EEPROM_prog.o
@@ -1019,28 +1031,28 @@ END GROUP
  .debug_frame   0x000005d4       0xa8 MCAL/TIM1/TIM1_prog.o
  .debug_frame   0x0000067c      0x104 MCAL/TIM2/TIM2_prog.o
 
-.debug_str      0x00000000      0x9e4
+.debug_str      0x00000000      0x9d2
  *(.debug_str)
  .debug_str     0x00000000      0x196 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32/avr5/crtatmega32.o
- .debug_str     0x00000196      0x1e2 APP/main.o
-                                0x21b (size before relaxing)
- .debug_str     0x00000378      0x1f8 HAL/LCD/LCD_prog.o
+ .debug_str     0x00000196      0x1d0 APP/main.o
+                                0x209 (size before relaxing)
+ .debug_str     0x00000366      0x1f8 HAL/LCD/LCD_prog.o
                                 0x377 (size before relaxing)
- .debug_str     0x00000570       0x63 HAL/LED/LED_prog.o
+ .debug_str     0x0000055e       0x63 HAL/LED/LED_prog.o
                                 0x1e7 (size before relaxing)
- .debug_str     0x000005d3       0x6f HAL/ULTRASONIC/ULTRASONIC_prog.o
-                                0x263 (size before relaxing)
- .debug_str     0x00000642       0x94 MCAL/ADC/ADC_prog.o
+ .debug_str     0x000005c1       0x6f HAL/ULTRASONIC/ULTRASONIC_prog.o
+                                0x251 (size before relaxing)
+ .debug_str     0x00000630       0x94 MCAL/ADC/ADC_prog.o
                                 0x1fb (size before relaxing)
- .debug_str     0x000006d6       0x5b MCAL/DIO/DIO_prog.o
+ .debug_str     0x000006c4       0x5b MCAL/DIO/DIO_prog.o
                                 0x219 (size before relaxing)
- .debug_str     0x00000731       0xf1 MCAL/EXTI/EXTI_prog.o
+ .debug_str     0x0000071f       0xf1 MCAL/EXTI/EXTI_prog.o
                                 0x25d (size before relaxing)
- .debug_str     0x00000822       0x9b MCAL/TIM0/TIM0_prog.o
+ .debug_str     0x00000810       0x9b MCAL/TIM0/TIM0_prog.o
                                 0x208 (size before relaxing)
- .debug_str     0x000008bd       0xad MCAL/TIM1/TIM1_prog.o
-                                0x245 (size before relaxing)
- .debug_str     0x0000096a       0x7a MCAL/TIM2/TIM2_prog.o
+ .debug_str     0x000008ab       0xad MCAL/TIM1/TIM1_prog.o
+                                0x233 (size before relaxing)
+ .debug_str     0x00000958       0x7a MCAL/TIM2/TIM2_prog.o
                                 0x206 (size before relaxing)
 
 .debug_loc      0x00000000     0x1558
