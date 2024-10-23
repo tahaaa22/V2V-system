@@ -12,31 +12,32 @@
 
 
 int main(void) {
+		
 	
-	DIO_voidSetPortDir(LCD_DPORT,0XF0);
-	DIO_voidSetPortDir(LCD_CPORT,0X0E);
-	LCD_voidInit();
-	
-	
+	DC_MOTOR_voidMoveForward_1(90);
+	DC_MOTOR_voidMoveForward_2(90);
+// 	
 	
 	while(1) {
 		
+		
 		u16 dist = ULTRASONIC_u16GetDistance();
+	
 		
-		LCD_voidGoto(0,0);
-		LCD_voidSendNum(dist);
-		
+		_delay_ms(100);
 		if (dist < 10)
 		{
-			LCD_voidClearScreen();
-			
+	
+			DC_MOTOR_voidStop_1();
+			DC_MOTOR_voidStop_2();
 			LED_voidOn(DIO_PORTC,DIO_PIN2);
-			}else{
+		}else{
+			DC_MOTOR_voidMoveForward_1(90);
+			DC_MOTOR_voidMoveForward_2(90);
 			LED_voidOff(DIO_PORTC,DIO_PIN2);
 			
 		}
 
-		
 	}
 
 

@@ -38,6 +38,11 @@ u16 ULTRASONIC_u16GetDistance(void){
 	// Calculate distance in centimeters using integer arithmetic
 	u16 distance = ((Ton * 34600) / (F_CPU * 2)); // 25°C
 	
+	if (distance >= 50)
+	{
+		return 50;
+	}
+	
 	return distance;
 	
 	
