@@ -16,7 +16,7 @@
 *****************************************************************************/
 void DC_MOTOR_voidCW(u8 copy_u8speed){
 	#if ELECTRICAL_SWITCH == H_BRIDGE_CONNECTION
-		#if H_BRIDGE == H_BRIDGE_1
+		//#if H_BRIDGE == H_BRIDGE_1
 		DIO_voidSetPinDir(DC_MOTOR_H_EN1_PORT,DC_MOTOR_H_EN1_PIN,OUTPUT);
 		DIO_voidSetPinDir(DC_MOTOR_H_A1_PORT,DC_MOTOR_H_A1_PIN,OUTPUT);
 		DIO_voidSetPinDir(DC_MOTOR_H_A2_PORT,DC_MOTOR_H_A2_PIN,OUTPUT);
@@ -24,7 +24,7 @@ void DC_MOTOR_voidCW(u8 copy_u8speed){
 		TIM1_voidFastPWM10BitRes(OC1B_PIN,copy_u8speed);
 		DIO_voidSetPinVal(DC_MOTOR_H_A1_PORT,DC_MOTOR_H_A1_PIN,HIGH);
 		DIO_voidSetPinVal(DC_MOTOR_H_A2_PORT,DC_MOTOR_H_A2_PIN,LOW);
-		#elif H_BRIDGE == H_BRIDGE_2
+		//#elif H_BRIDGE == H_BRIDGE_2
 		DIO_voidSetPinDir(DC_MOTOR_H_EN2_PORT,DC_MOTOR_H_EN2_PIN,OUTPUT);
 		DIO_voidSetPinDir(DC_MOTOR_H_A3_PORT,DC_MOTOR_H_A3_PIN,OUTPUT);
 		DIO_voidSetPinDir(DC_MOTOR_H_A4_PORT,DC_MOTOR_H_A4_PIN,OUTPUT);
@@ -32,7 +32,7 @@ void DC_MOTOR_voidCW(u8 copy_u8speed){
 		TIM1_voidFastPWM10BitRes(OC1A_PIN,copy_u8speed);
 		DIO_voidSetPinVal(DC_MOTOR_H_A3_PORT,DC_MOTOR_H_A3_PIN,HIGH);
 		DIO_voidSetPinVal(DC_MOTOR_H_A4_PORT,DC_MOTOR_H_A4_PIN,LOW);
-		#endif
+		//#endif
 	#elif ELECTRICAL_SWITCH == RELAY_CONNECTION
 	DIO_voidSetPinDir(DC_MOTOR_H_EN1_PORT,DC_MOTOR_H_EN1_PIN,OUTPUT);
 	TIM1_voidFastPWM10BitRes(OC1B_PIN,copy_u8speed);
@@ -49,7 +49,7 @@ void DC_MOTOR_voidCW(u8 copy_u8speed){
 *****************************************************************************/
 void DC_MOTOR_voidACW(u8 copy_u8speed){
 	#if ELECTRICAL_SWITCH == H_BRIDGE_CONNECTION
-		#if H_BRIDGE == H_BRIDGE_1
+		//#if H_BRIDGE == H_BRIDGE_1
 		DIO_voidSetPinDir(DC_MOTOR_H_EN1_PORT,DC_MOTOR_H_EN1_PIN,OUTPUT);
 		DIO_voidSetPinDir(DC_MOTOR_H_A1_PORT,DC_MOTOR_H_A1_PIN,OUTPUT);
 		DIO_voidSetPinDir(DC_MOTOR_H_A2_PORT,DC_MOTOR_H_A2_PIN,OUTPUT);
@@ -57,7 +57,7 @@ void DC_MOTOR_voidACW(u8 copy_u8speed){
 		TIM1_voidFastPWM10BitRes(OC1B_PIN,copy_u8speed);
 		DIO_voidSetPinVal(DC_MOTOR_H_A1_PORT,DC_MOTOR_H_A1_PIN,LOW);
 		DIO_voidSetPinVal(DC_MOTOR_H_A2_PORT,DC_MOTOR_H_A2_PIN,HIGH);
-		#elif H_BRIDGE == H_BRIDGE_2
+		//#elif H_BRIDGE == H_BRIDGE_2
 		DIO_voidSetPinDir(DC_MOTOR_H_EN2_PORT,DC_MOTOR_H_EN2_PIN,OUTPUT);
 		DIO_voidSetPinDir(DC_MOTOR_H_A3_PORT,DC_MOTOR_H_A3_PIN,OUTPUT);
 		DIO_voidSetPinDir(DC_MOTOR_H_A4_PORT,DC_MOTOR_H_A4_PIN,OUTPUT);
@@ -65,7 +65,7 @@ void DC_MOTOR_voidACW(u8 copy_u8speed){
 		TIM1_voidFastPWM10BitRes(OC1A_PIN,copy_u8speed);
 		DIO_voidSetPinVal(DC_MOTOR_H_A3_PORT,DC_MOTOR_H_A3_PIN,LOW);
 		DIO_voidSetPinVal(DC_MOTOR_H_A4_PORT,DC_MOTOR_H_A4_PIN,HIGH);
-		#endif
+		//#endif
 	#elif ELECTRICAL_SWITCH == RELAY_CONNECTION
 		DIO_voidSetPinDir(DC_MOTOR_H_EN1_PORT,DC_MOTOR_H_EN1_PIN,OUTPUT);
 		TIM1_voidFastPWM10BitRes(OC1B_PIN,copy_u8speed);
@@ -79,7 +79,7 @@ void DC_MOTOR_voidACW(u8 copy_u8speed){
 * Return value : void
 *****************************************************************************/
 void DC_MOTOR_voidStop(void){
-	#if H_BRIDGE == H_BRIDGE_1
+	//#if H_BRIDGE == H_BRIDGE_1
 	DIO_voidSetPinDir(DC_MOTOR_H_EN1_PORT,DC_MOTOR_H_EN1_PIN,OUTPUT);
 	DIO_voidSetPinDir(DC_MOTOR_H_A1_PORT,DC_MOTOR_H_A1_PIN,OUTPUT);
 	DIO_voidSetPinDir(DC_MOTOR_H_A2_PORT,DC_MOTOR_H_A2_PIN,OUTPUT);
@@ -87,7 +87,7 @@ void DC_MOTOR_voidStop(void){
 	TIM1_voidFastPWM10BitRes(OC1B_PIN,0);
 	DIO_voidSetPinVal(DC_MOTOR_H_A1_PORT,DC_MOTOR_H_A1_PIN,LOW);
 	DIO_voidSetPinVal(DC_MOTOR_H_A2_PORT,DC_MOTOR_H_A2_PIN,LOW);
-	#elif H_BRIDGE == H_BRIDGE_2
+	//#elif H_BRIDGE == H_BRIDGE_2
 	DIO_voidSetPinDir(DC_MOTOR_H_EN2_PORT,DC_MOTOR_H_EN2_PIN,OUTPUT);
 	DIO_voidSetPinDir(DC_MOTOR_H_A3_PORT,DC_MOTOR_H_A3_PIN,OUTPUT);
 	DIO_voidSetPinDir(DC_MOTOR_H_A4_PORT,DC_MOTOR_H_A4_PIN,OUTPUT);
@@ -95,7 +95,7 @@ void DC_MOTOR_voidStop(void){
 	TIM1_voidFastPWM10BitRes(OC1A_PIN,0);
 	DIO_voidSetPinVal(DC_MOTOR_H_A3_PORT,DC_MOTOR_H_A3_PIN,LOW);
 	DIO_voidSetPinVal(DC_MOTOR_H_A4_PORT,DC_MOTOR_H_A4_PIN,LOW);
-	#endif
+	//#endif
 }
 
 void DC_MOTOR_voidMoveForward_1(u8 copy_u8speed){
