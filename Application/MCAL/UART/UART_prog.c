@@ -74,3 +74,9 @@ u8 UART_u8Rx(void){
 	/* Get and return received data from buffer */
 	return UDR_REG;
 }
+
+void UART_voidSendString(const u8* str){
+	while(*str){
+		UART_voidTx(*str++);
+	}
+}

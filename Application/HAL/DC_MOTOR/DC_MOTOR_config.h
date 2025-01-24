@@ -13,8 +13,8 @@
 #define  DC_MOTOR_H_EN1_PORT        DIO_PORTD
 #define  DC_MOTOR_H_EN1_PIN         DIO_PIN4
 
-#define  DC_MOTOR_H_EN2_PORT        DIO_PORTD
-#define  DC_MOTOR_H_EN2_PIN         DIO_PIN5
+#define  DC_MOTOR_H_EN2_PORT        DIO_PORTB
+#define  DC_MOTOR_H_EN2_PIN         DIO_PIN3
 
 #define  DC_MOTOR_H_A1_PORT         DIO_PORTC
 #define  DC_MOTOR_H_A1_PIN          DIO_PIN3

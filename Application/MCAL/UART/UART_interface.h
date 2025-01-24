@@ -97,5 +97,7 @@ void UART_voidTx(u8 copy_u8data);
 *****************************************************************************/
 u8 UART_u8Rx(void);
 
+void UART_voidSendString(const u8* str);
+
 
 #endif /* UART_INTERFACE_H_ */
